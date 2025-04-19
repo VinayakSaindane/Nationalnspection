@@ -39,9 +39,9 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path}>
-                <a className={`font-medium ${location === item.path ? 'text-accent-500' : 'text-primary'} hover:text-accent-500 transition duration-300`}>
+                <span className={`font-medium cursor-pointer ${location === item.path ? 'text-accent-500' : 'text-primary'} hover:text-accent-500 transition duration-300`}>
                   {item.label}
-                </a>
+                </span>
               </Link>
             ))}
           </nav>

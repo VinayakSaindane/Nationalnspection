@@ -1,5 +1,6 @@
 import { SERVICES } from "@/lib/constants";
 import CTABanner from "@/components/home/CTABanner";
+import PageHeader from "@/components/layout/PageHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet";
@@ -139,14 +140,10 @@ const Services = () => {
         <title>Services | National Inspection</title>
         <meta name="description" content="Discover our comprehensive welding services including consultancy, training, certification, NDT, calibration and placement services." />
       </Helmet>
-      <div className="bg-primary text-white py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl font-bold font-inter mb-4 text-center">Our Services</h1>
-          <p className="text-lg max-w-3xl mx-auto text-center">
-            Comprehensive welding services to support your business needs and ensure quality and compliance.
-          </p>
-        </div>
-      </div>
+      <PageHeader 
+        title="Our Services" 
+        description="Comprehensive welding services to support your business needs and ensure quality and compliance." 
+      />
       
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
