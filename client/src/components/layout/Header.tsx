@@ -50,7 +50,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button asChild className="bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 shadow-md">
               <Link href="/contact">
-                <a>Get a Quote</a>
+                <span>Get a Quote</span>
               </Link>
             </Button>
           </div>
@@ -71,21 +71,21 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               {menuItems.map((item) => (
                 <Link key={item.path} href={item.path}>
-                  <a 
-                    className={`font-medium ${location === item.path ? 'text-accent-500' : 'text-primary'} hover:text-accent-500 transition duration-300`}
+                  <span 
+                    className={`font-medium cursor-pointer block ${location === item.path ? 'text-accent-500' : 'text-primary'} hover:text-accent-500 transition duration-300`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
               <Link href="/contact">
-                <a 
-                  className="bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 shadow-md text-center"
+                <span 
+                  className="bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 shadow-md text-center block cursor-pointer"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get a Quote
-                </a>
+                </span>
               </Link>
             </nav>
           </div>
