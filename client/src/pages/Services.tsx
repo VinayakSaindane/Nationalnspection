@@ -152,18 +152,20 @@ const Services = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12">
             {serviceDetails.map((service) => (
-              <Card key={service.id} className="bg-gray-50">
+              <Card key={service.id} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 border-none overflow-hidden">
                 <CardContent className="p-8">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-1">
                       <div 
-                        className="h-64 bg-cover bg-center rounded-lg mb-4" 
+                        className="h-72 bg-cover bg-center rounded-lg mb-4 overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105" 
                         style={{ 
                           backgroundImage: `url('${SERVICES.find(s => s.id === service.id)?.backgroundImage}')` 
                         }}
                       >
-                        <div className="h-full w-full bg-primary bg-opacity-70 rounded-lg flex items-center justify-center">
-                          <i className={`${SERVICES.find(s => s.id === service.id)?.icon} text-5xl text-accent-500`}></i>
+                        <div className="h-full w-full bg-gradient-to-b from-transparent to-primary/80 rounded-lg flex items-end justify-center p-4">
+                          <div className="bg-white/90 p-3 rounded-full shadow-md mb-2">
+                            <i className={`${SERVICES.find(s => s.id === service.id)?.icon} text-4xl text-primary`}></i>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -176,11 +178,13 @@ const Services = () => {
                         <AccordionItem value="features">
                           <AccordionTrigger className="text-lg font-bold text-primary">Services Offered</AccordionTrigger>
                           <AccordionContent>
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                               {service.features.map((feature, index) => (
-                                <li key={index} className="flex items-center">
-                                  <i className="fas fa-check text-green-500 mr-2"></i>
-                                  <span className="text-gray-600">{feature}</span>
+                                <li key={index} className="flex items-center p-2 rounded-md transition-colors hover:bg-gray-100">
+                                  <div className="bg-primary/10 p-1.5 rounded-full text-primary mr-3">
+                                    <i className="fas fa-check text-sm"></i>
+                                  </div>
+                                  <span className="text-gray-700">{feature}</span>
                                 </li>
                               ))}
                             </ul>
@@ -190,11 +194,13 @@ const Services = () => {
                         <AccordionItem value="benefits">
                           <AccordionTrigger className="text-lg font-bold text-primary">Key Benefits</AccordionTrigger>
                           <AccordionContent>
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                               {service.benefits.map((benefit, index) => (
-                                <li key={index} className="flex items-center">
-                                  <i className="fas fa-check text-green-500 mr-2"></i>
-                                  <span className="text-gray-600">{benefit}</span>
+                                <li key={index} className="flex items-center p-2 rounded-md transition-colors hover:bg-gray-100">
+                                  <div className="bg-primary/10 p-1.5 rounded-full text-primary mr-3">
+                                    <i className="fas fa-star text-sm"></i>
+                                  </div>
+                                  <span className="text-gray-700">{benefit}</span>
                                 </li>
                               ))}
                             </ul>
