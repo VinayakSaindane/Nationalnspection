@@ -1,0 +1,218 @@
+import { SERVICES } from "@/lib/constants";
+import CTABanner from "@/components/home/CTABanner";
+import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Helmet } from "react-helmet";
+import { useEffect } from "react";
+
+const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const serviceDetails = [
+    {
+      id: 1,
+      title: "Consultancy",
+      description: "Our consultancy services help organizations optimize their welding operations for efficiency, quality, and compliance.",
+      features: [
+        "Welding process optimization",
+        "Quality control system development",
+        "Compliance with industry standards",
+        "Project management assistance",
+        "Process documentation and standardization",
+        "Expert troubleshooting and problem resolution"
+      ],
+      benefits: [
+        "Reduced operational costs",
+        "Improved weld quality",
+        "Enhanced productivity",
+        "Compliance with industry regulations",
+        "Streamlined processes"
+      ]
+    },
+    {
+      id: 2,
+      title: "Training & Certification",
+      description: "We offer comprehensive training programs designed to develop skilled welders and inspectors, with industry-recognized certifications.",
+      features: [
+        "Beginner to advanced level courses",
+        "Multiple welding process training",
+        "Specialized certification preparation",
+        "Hands-on practical sessions",
+        "Expert-led theoretical classes",
+        "Performance evaluation and feedback"
+      ],
+      benefits: [
+        "Skilled workforce development",
+        "Validated professional credentials",
+        "Career advancement opportunities",
+        "Compliance with job requirements",
+        "Enhanced safety awareness"
+      ]
+    },
+    {
+      id: 3,
+      title: "Calibration",
+      description: "Our precision calibration services ensure your welding equipment operates at optimal performance levels.",
+      features: [
+        "Welding machine calibration",
+        "Testing equipment calibration",
+        "Calibration certificate issuance",
+        "Preventive maintenance",
+        "Conformance to standards testing",
+        "Equipment performance verification"
+      ],
+      benefits: [
+        "Accurate welding parameters",
+        "Consistent weld quality",
+        "Extended equipment lifespan",
+        "Compliance documentation",
+        "Reduced downtime from equipment failures"
+      ]
+    },
+    {
+      id: 4,
+      title: "N.D.T. (Non-Destructive Testing)",
+      description: "Our comprehensive NDT services verify the quality and integrity of welds without compromising the structure.",
+      features: [
+        "Ultrasonic testing",
+        "Radiographic testing",
+        "Magnetic particle testing",
+        "Dye penetrant testing",
+        "Visual inspection",
+        "Comprehensive reporting"
+      ],
+      benefits: [
+        "Early defect detection",
+        "Quality assurance",
+        "Risk reduction",
+        "Cost-effective testing",
+        "Documentation for compliance"
+      ]
+    },
+    {
+      id: 5,
+      title: "Welding Placement",
+      description: "Our placement services connect skilled welders with industry opportunities, benefiting both employers and job seekers.",
+      features: [
+        "Skilled welder recruitment",
+        "Candidate skills assessment",
+        "Job requirement analysis",
+        "Placement coordination",
+        "Follow-up performance evaluation",
+        "Contract and permanent positions"
+      ],
+      benefits: [
+        "Access to verified skilled professionals",
+        "Reduced recruitment costs",
+        "Quick fulfillment of workforce needs",
+        "Career opportunities for welders",
+        "Industry-specific talent matching"
+      ]
+    },
+    {
+      id: 6,
+      title: "Quality Inspection",
+      description: "Our comprehensive inspection services ensure welds meet industry standards and specifications, providing peace of mind and documentation.",
+      features: [
+        "Pre-welding material inspection",
+        "In-process welding inspection",
+        "Post-weld quality verification",
+        "Documentation and reporting",
+        "Code compliance verification",
+        "Defect identification and solutions"
+      ],
+      benefits: [
+        "Quality assurance",
+        "Compliance documentation",
+        "Risk mitigation",
+        "Process improvement insights",
+        "Third-party verification"
+      ]
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Services | National Inspection</title>
+        <meta name="description" content="Discover our comprehensive welding services including consultancy, training, certification, NDT, calibration and placement services." />
+      </Helmet>
+      <div className="bg-primary text-white py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl md:text-4xl font-bold font-inter mb-4 text-center">Our Services</h1>
+          <p className="text-lg max-w-3xl mx-auto text-center">
+            Comprehensive welding services to support your business needs and ensure quality and compliance.
+          </p>
+        </div>
+      </div>
+      
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12">
+            {serviceDetails.map((service) => (
+              <Card key={service.id} className="bg-gray-50">
+                <CardContent className="p-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div className="lg:col-span-1">
+                      <div 
+                        className="h-64 bg-cover bg-center rounded-lg mb-4" 
+                        style={{ 
+                          backgroundImage: `url('${SERVICES.find(s => s.id === service.id)?.backgroundImage}')` 
+                        }}
+                      >
+                        <div className="h-full w-full bg-primary bg-opacity-70 rounded-lg flex items-center justify-center">
+                          <i className={`${SERVICES.find(s => s.id === service.id)?.icon} text-5xl text-accent-500`}></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="lg:col-span-2">
+                      <h2 className="text-2xl font-bold font-inter text-primary mb-4">{service.title}</h2>
+                      <p className="text-gray-600 mb-6">{service.description}</p>
+                      
+                      <Accordion type="single" collapsible className="mb-6">
+                        <AccordionItem value="features">
+                          <AccordionTrigger className="text-lg font-bold text-primary">Services Offered</AccordionTrigger>
+                          <AccordionContent>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                              {service.features.map((feature, index) => (
+                                <li key={index} className="flex items-center">
+                                  <i className="fas fa-check text-green-500 mr-2"></i>
+                                  <span className="text-gray-600">{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionContent>
+                        </AccordionItem>
+                        
+                        <AccordionItem value="benefits">
+                          <AccordionTrigger className="text-lg font-bold text-primary">Key Benefits</AccordionTrigger>
+                          <AccordionContent>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                              {service.benefits.map((benefit, index) => (
+                                <li key={index} className="flex items-center">
+                                  <i className="fas fa-check text-green-500 mr-2"></i>
+                                  <span className="text-gray-600">{benefit}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      <CTABanner />
+    </>
+  );
+};
+
+export default Services;
