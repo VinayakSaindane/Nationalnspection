@@ -1,0 +1,71 @@
+Generate a fully functional and responsive website for a company named "National Inspection" with the tagline "A Total Welder's Hub". The website should have the following key features and sections:
+
+**Overall Design and Functionality:**
+
+* **Modern and Professional Design:** The website should have a clean, modern, and professional design that inspires trust and reflects expertise in the welding industry. Consider using a color scheme that incorporates blues, greys, and perhaps a touch of a warmer accent color to convey reliability and skill.
+* **Responsive Layout:** The website must be fully responsive and adapt seamlessly to different screen sizes (desktops, tablets, and mobile devices).
+* **Clear Navigation:** Implement a user-friendly navigation menu that allows visitors to easily access all important sections of the website. The main navigation should include links to: Home, About Us, Services, Training & Certification, Contact Us.
+* **Engaging Visuals:** Include relevant high-quality images and icons related to welding, inspection, training, and technology.
+* **Clear Calls to Action (CTAs):** Strategically place clear and concise CTAs throughout the website to encourage user engagement (e.g., "Learn More," "Get a Quote," "Enroll Now," "Contact Us").
+* **Fast Loading Speed:** Optimize images and code to ensure the website loads quickly and efficiently.
+* **SEO-Friendly Structure:** Implement basic SEO principles in the website structure, including clear headings, meta descriptions (which you will later customize), and alt text for images.
+
+**Specific Sections and Content:**
+
+1.  **Homepage:**
+    * **Hero Section:** A compelling headline that clearly states the company's value proposition (e.g., "Your Comprehensive Partner for Welding Excellence"). Include the company name and tagline prominently. A visually appealing background image or video related to welding or inspection. A clear call to action (e.g., "Explore Our Services" or "Get a Free Consultation").
+    * **"Why Choose Us?" Section:** Highlight 3-4 key benefits of choosing National Inspection (e.g., Expertise, Comprehensive Services, Quality Assurance, Experienced Team). Use icons to visually represent each benefit.
+    * **Services Overview:** Briefly introduce the main service categories (Consultancy, Training & Certification, Calibration, N.D.T., Welding Placement, Services) with short descriptions and visually appealing icons or images. Include a "Learn More" button for each service that links to its dedicated page.
+    * **Client Testimonials (Optional):** Include a section with positive testimonials from satisfied clients to build trust and credibility.
+    * **Call to Action Banner:** A prominent banner encouraging visitors to contact you or request a quote.
+
+2.  **About Us Page:**
+    * **Company Overview:** Provide a detailed description of National Inspection, its mission, values, and history.
+    * **Our Expertise:** Highlight the team's experience, qualifications, and commitment to quality in the welding industry.
+    * **Why We're Different:** Explain what sets National Inspection apart from competitors.
+
+3.  **Services Page:**
+    * Provide detailed information about each of the following services:
+        * **Consultancy:** Describe the types of welding consultancy services offered (e.g., process optimization, quality control, compliance, project management).
+        * **Training & Certification:** Outline the welding training programs and certifications offered (mention specific welding processes or standards if applicable). Include information about course content, duration, and instructors.
+        * **Calibration:** Explain the calibration services for welding equipment and related tools. Highlight accuracy and compliance.
+        * **N.D.T. (Non-Destructive Testing):** Detail the NDT methods offered (e.g., ultrasonic testing, radiographic testing, magnetic particle testing, dye penetrant testing). Explain the importance of NDT for quality assurance.
+        * **Welding Placement:** Describe your services for connecting skilled welders with suitable job opportunities. Explain the process for both employers and job seekers.
+        * **Other Services (Specify if any):** Include any other relevant services you provide.
+    * Use clear headings, bullet points, and visuals to present the information for each service. Include a call to action (e.g., "Request a Quote," "Learn More").
+
+4.  **Training & Certification Page (Can be a sub-section of the Services page or a separate page):**
+    * Provide a comprehensive list of all training courses and certifications offered.
+    * For each course/certification, include details such as:
+        * Course Name
+        * Brief Description
+        * Target Audience
+        * Learning Outcomes
+        * Duration
+        * Certification Awarded (if applicable)
+        * Schedule (if available)
+        * Enrollment Information and Call to Action (e.g., "Enroll Now," "View Schedule").
+
+5.  **Contact Us Page:**
+    * **Contact Form:** Include a user-friendly contact form for inquiries. Request fields such as Name, Email, Phone Number, Subject, and Message.
+    * **Contact Information:** Display your company's physical address (if applicable), phone number, email address, and working hours clearly.
+    * **Map (Optional):** Embed a Google Map showing your location.
+
+**Technical Requirements:**
+
+* **Platform:** Specify the platform you want the website to be built on (e.g., HTML/CSS/JavaScript for a static site, or a specific CMS like WordPress if you want more content management capabilities). If you are unsure, you can ask the AI to suggest the best platform based on your needs.
+* **Responsiveness:** Reiterate the need for a fully responsive design.
+* **Basic SEO:** Ensure the generated code follows basic SEO best practices.
+
+**Optional Features (You can include these if you want more advanced functionality):**
+
+* **Blog Section:** To share industry insights, news, and company updates.
+* **Online Payment Integration:** For training courses or other services.
+* **Client Portal:** For registered clients to access specific information or resources.
+* **Multilingual Support:** If you cater to a diverse audience.
+
+**Instructions for the AI:**
+
+* Please generate all the necessary HTML, CSS, and JavaScript code (or the code for the specified platform) to create this website.
+* Use placeholder content where necessary (e.g., "[Company Name]", "[Tagline]", "[Service Description]", "[Image URL]"). Clearly indicate these placeholders so they can be easily updated with real content later.
+* Ensure the code is well-organized, commented, and easy to understand.
