@@ -1,7 +1,6 @@
 import TrainingSection from "@/components/training/TrainingSection";
 import CTABanner from "@/components/home/CTABanner";
 import PageHeader from "@/components/layout/PageHeader";
-import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 
 const Training = () => {
@@ -11,10 +10,9 @@ const Training = () => {
   
   return (
     <>
-      <Helmet>
         <title>Training & Certification | National Inspection</title>
         <meta name="description" content="Develop your welding skills with our comprehensive training programs and industry-recognized certifications." />
-      </Helmet>
+      
       <PageHeader 
         title="Training & Certification" 
         description="Develop your team's skills with our comprehensive welding training programs and industry-recognized certifications." 

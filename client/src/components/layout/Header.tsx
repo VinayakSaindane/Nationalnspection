@@ -47,13 +47,12 @@ const Header = () => {
           </nav>
           
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button asChild className="bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 shadow-md">
-              <Link href="/contact">
-                <span>Get a Quote</span>
-              </Link>
-            </Button>
-          </div>
+          <Button asChild className="bg-blue-800 hover:bg-blue-900 text-white font-medium py-2 px-4 rounded-md transition duration-300 shadow-md">
+  <Link href="/contact">
+    <span>Get a Quote</span>
+  </Link>
+</Button>
+
           
           {/* Mobile Menu Button */}
           <button 
@@ -81,11 +80,12 @@ const Header = () => {
               ))}
               <Link href="/contact">
                 <span 
-                  className="bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 shadow-md text-center block cursor-pointer"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get a Quote
-                </span>
+  className="bg-blue-800 hover:bg-blue-900 text-white font-medium py-2 px-4 rounded-md transition duration-300 shadow-md text-center block cursor-pointer"
+  onClick={() => setMobileMenuOpen(false)}
+>
+  Get a Quote
+</span>
+
               </Link>
             </nav>
           </div>

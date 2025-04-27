@@ -63,15 +63,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-inter text-primary mb-4">
-            Contact Us
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Reach out to our team for inquiries, quotes, or to discuss your welding service needs.
-          </p>
-        </div>
-        
+       
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             <Card className="bg-gray-50">
