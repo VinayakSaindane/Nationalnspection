@@ -1,3 +1,4 @@
+const aboutImage = "client/public/src/assets/family.jpg";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
@@ -8,9 +9,10 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1574127744826-0c4ac997ffa5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+              src={aboutImage}
               alt="Industrial welding team" 
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-lg w-full h-[500px] object-cover"
+              loading="eager"
             />
           </div>
           <div>
