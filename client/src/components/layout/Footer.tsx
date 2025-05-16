@@ -24,10 +24,10 @@ const Footer = () => {
               quality and safety in the welding industry.
             </p>
             <div className="flex space-x-4">
-              {["facebook-f", "twitter", "linkedin-in", "instagram"].map((icon, i) => (
+              {["facebook-f",  "linkedin-in", "instagram"].map((icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href="https://www.facebook.com/share/g/1ASpQXbsJx/?mibextid=wwXIfr,https://www.instagram.com/national_inspection/"
                   className="bg-white/10 p-2 rounded-full text-gray-200 hover:text-white hover:bg-accent-500 transition duration-300"
                 >
                   <i className={`fab fa-${icon}`}></i>
