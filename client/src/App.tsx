@@ -4,6 +4,7 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Training from "@/pages/Training";
 import Contact from "@/pages/Contact";
+import Gallery from "@/pages/Gallery";
 import NotFound from "@/pages/not-found";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/training" component={Training} />
           <Route path="/contact" component={Contact} />
+          <Route path="/gallery" component={Gallery} />
           <Route component={NotFound} />
         </Switch>
       </main>

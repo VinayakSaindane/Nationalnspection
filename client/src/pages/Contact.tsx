@@ -4,44 +4,26 @@ import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 
 const Contact = () => {
-  const [userLocation, setUserLocation] = useState(null);
-  const [activeLocation, setActiveLocation] = useState("destination");
-  
-  // Virar, Maharashtra coordinates (fixed destination)
+  // Virar East D-Mart coordinates (fixed destination)
   const destinationLocation = {
     lat: 19.4564,
     lng: 72.7925,
-    name: "National Inspection Services - Virar"
+    name: "National Inspection Services - Virar East D-Mart"
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    // Get user location
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setUserLocation({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-          name: "Your Current Location"
-        });
-      },
-      (err) => {
-        console.error("Error getting location", err);
-      }
-    );
   }, []);
 
-  // Get the active map URL based on selection
+  // Get the map URL for the office location
   const getMapUrl = () => {
-    if (activeLocation === "user" && userLocation) {
-      return `https://www.google.com/maps?q=${userLocation.lat},${userLocation.lng}&z=15&output=embed`;
-    } else if (activeLocation === "destination") {
-      return `https://www.google.com/maps?q=${destinationLocation.lat},${destinationLocation.lng}&z=15&output=embed`;
-    } else if (activeLocation === "directions" && userLocation) {
-      return `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destinationLocation.lat},${destinationLocation.lng}/&output=embed`;
-    }
-    return "";
+    return `https://www.google.com/maps?q=${destinationLocation.lat},${destinationLocation.lng}&z=15&output=embed`;
+  };
+
+  // Handle direction click to open Google Maps in new tab
+  const handleGetDirections = () => {
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destinationLocation.lat},${destinationLocation.lng}`;
+    window.open(directionsUrl, '_blank');
   };
 
   return (
@@ -61,40 +43,18 @@ const Contact = () => {
 
       <section className="contact-container">
         <div className="contact-content">
-          <ContactSection />
-          <div className="map-section">
-            <div className="map-header">
-              <h2>Location</h2>
-              <div className="map-tabs">
-                <button 
-                  className={`map-tab ${activeLocation === "destination" ? "active" : ""}`}
-                  onClick={() => setActiveLocation("destination")}
-                >
-                  Our Office (Virar)
-                </button>
-                <button 
-                  className={`map-tab ${activeLocation === "user" ? "active" : ""}`}
-                  onClick={() => setActiveLocation("user")}
-                  disabled={!userLocation}
-                >
-                  Your Location
-                </button>
-                <button 
-                  className={`map-tab ${activeLocation === "directions" ? "active" : ""}`}
-                  onClick={() => setActiveLocation("directions")}
-                  disabled={!userLocation}
-                >
-                  Get Directions
-                </button>
-              </div>
-            </div>
+          <div className="contact-section-wrapper">
+            {/* Contact Form Section */}
+            <ContactSection />
             
-            <div className="map-container">
-              {(activeLocation === "user" && !userLocation) ? (
-                <div className="map-loading">
-                  <p>Locating your position...</p>
-                </div>
-              ) : (
+            {/* Map Section - Now integrated below the contact form */}
+            <div className="map-section">
+              <div className="map-header">
+                <h2>Our Location</h2>
+                <p className="map-description">Click on "Get Directions" to navigate to our office</p>
+              </div>
+              
+              <div className="map-container">
                 <iframe
                   title="Map View"
                   width="100%"
@@ -104,27 +64,37 @@ const Contact = () => {
                   src={getMapUrl()}
                   allowFullScreen
                 ></iframe>
-              )}
-            </div>
-            
-            <div className="map-info">
-              <div className="info-card">
-                <h3>Visit Our Office</h3>
-                <p>
-                  <strong>National Inspection Services</strong><br />
-                  123 Welding Street, Near Railway Station<br />
-                  Virar West, Maharashtra 401303<br />
-                  India
-                </p>
               </div>
               
-              <div className="info-card">
-                <h3>Office Hours</h3>
-                <p>
-                  Monday - Friday: 9:00 AM - 6:00 PM<br />
-                  Saturday: 10:00 AM - 2:00 PM<br />
-                  Sunday: Closed
-                </p>
+              <div className="map-actions">
+                <button 
+                  className="directions-btn"
+                  onClick={handleGetDirections}
+                >
+                  <span className="directions-icon">📍</span>
+                  Get Directions to Our Office
+                </button>
+              </div>
+              
+              <div className="map-info">
+                <div className="info-card">
+                  <h3>Visit Our Office</h3>
+                  <p>
+                    <strong>National Inspection Services</strong><br />
+                    Near D-Mart, Virar East<br />
+                    Virar East, Maharashtra 401303<br />
+                    India
+                  </p>
+                </div>
+                
+                <div className="info-card">
+                  <h3>Office Hours</h3>
+                  <p>
+                    Monday - Friday: 9:00 AM - 6:00 PM<br />
+                    Saturday: 10:00 AM - 2:00 PM<br />
+                    Sunday: Closed
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -138,65 +108,83 @@ const Contact = () => {
         }
 
         .contact-content {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 2rem;
           max-width: 1200px;
           margin: 0 auto;
         }
 
-        .map-section {
-          display: flex;
-          flex-direction: column;
+        .contact-section-wrapper {
           background: white;
-          border-radius: 10px;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+          border-radius: 12px;
+          box-shadow: 0 6px 25px rgba(0,0,0,0.1);
           overflow: hidden;
+          padding: 2.5rem;
+        }
+
+        .map-section {
+          margin-top: 3rem;
+          padding-top: 2.5rem;
+          border-top: 2px solid #f0f0f0;
         }
 
         .map-header {
-          padding: 1.5rem 1.5rem 0;
+          margin-bottom: 1.5rem;
         }
 
         .map-header h2 {
-          margin-bottom: 1rem;
+          margin-bottom: 0.5rem;
           font-size: 1.8rem;
           color: #333;
+          font-weight: 600;
         }
 
-        .map-tabs {
-          display: flex;
+        .map-description {
+          color: #666;
+          font-size: 0.95rem;
+          margin-bottom: 1.5rem;
+          font-style: italic;
+        }
+
+        .map-actions {
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+
+        .directions-btn {
+          display: inline-flex;
+          align-items: center;
           gap: 0.5rem;
-          margin-bottom: 1rem;
-        }
-
-        .map-tab {
-          padding: 0.5rem 1rem;
-          background: #f0f0f0;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-size: 0.9rem;
-          transition: all 0.2s ease;
-        }
-
-        .map-tab:hover {
-          background: #e0e0e0;
-        }
-
-        .map-tab.active {
+          padding: 1rem 2rem;
           background: #0066cc;
           color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);
         }
 
-        .map-tab:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
+        .directions-btn:hover {
+          background: #0052a3;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+        }
+
+        .directions-btn:active {
+          transform: translateY(0);
+        }
+
+        .directions-icon {
+          font-size: 1.2rem;
         }
 
         .map-container {
-          padding: 0 1.5rem;
           height: 400px;
+          margin-bottom: 1.5rem;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .map-loading {
@@ -204,48 +192,80 @@ const Contact = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #f7f7f7;
+          background: #f7f8fa;
+          border: 2px dashed #dee2e6;
           border-radius: 8px;
+        }
+
+        .map-loading p {
+          color: #6c757d;
+          font-size: 1rem;
+          font-weight: 500;
         }
 
         .map-info {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 1rem;
-          padding: 1.5rem;
+          gap: 1.5rem;
         }
 
         .info-card {
-          padding: 1rem;
-          background: #f9f9f9;
-          border-radius: 6px;
+          padding: 1.5rem;
+          background: #f8f9fa;
+          border-radius: 8px;
+          border: 1px solid #e9ecef;
+          transition: transform 0.2s ease;
+        }
+
+        .info-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .info-card h3 {
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
           color: #0066cc;
           font-size: 1.2rem;
+          font-weight: 600;
         }
 
         .info-card p {
           color: #555;
-          line-height: 1.5;
-        }
-
-        @media (min-width: 768px) {
-          .contact-content {
-            grid-template-columns: 1fr 1fr;
-          }
+          line-height: 1.6;
+          margin: 0;
         }
 
         @media (max-width: 768px) {
+          .contact-section-wrapper {
+            padding: 1.5rem;
+          }
+          
+          .map-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+          }
+          
           .map-info {
             grid-template-columns: 1fr;
           }
           
-          .map-tabs {
-            flex-direction: column;
-            gap: 0.5rem;
+          .map-actions {
+            margin-bottom: 1rem;
+          }
+          
+          .directions-btn {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .contact-container {
+            padding: 2rem 1rem;
+          }
+          
+          .contact-section-wrapper {
+            padding: 1rem;
           }
         }
       `}</style>

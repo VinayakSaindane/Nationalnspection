@@ -2,6 +2,30 @@ import { Link } from "wouter";
 import { SERVICES, CONTACT_INFO } from "@/lib/constants";
 
 const Footer = () => {
+  // Social media links - you can update these with your actual URLs
+  const socialMediaLinks = [
+    {
+      icon: "facebook-f",
+      href: "https://www.facebook.com/share/g/1ASpQXbsJx/?mibextid=wwXIfr",
+      label: "Facebook"
+    },
+    {
+      icon: "linkedin-in",
+      href: "https://linkedin.com/company/national-inspection",
+      label: "LinkedIn"
+    },
+    {
+      icon: "instagram",
+      href: "https://www.instagram.com/national_inspection/",
+      label: "Instagram"
+    },
+    {
+      icon: "youtube",
+      href: "https://youtube.com/@nationalinspection",
+      label: "YouTube"
+    }
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -24,13 +48,16 @@ const Footer = () => {
               quality and safety in the welding industry.
             </p>
             <div className="flex space-x-4">
-              {["facebook-f",  "linkedin-in", "instagram"].map((icon, i) => (
+              {socialMediaLinks.map((social, i) => (
                 <a
                   key={i}
-                  href="https://www.facebook.com/share/g/1ASpQXbsJx/?mibextid=wwXIfr,https://www.instagram.com/national_inspection/"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Follow us on ${social.label}`}
                   className="bg-white/10 p-2 rounded-full text-gray-200 hover:text-white hover:bg-accent-500 transition duration-300"
                 >
-                  <i className={`fab fa-${icon}`}></i>
+                  <i className={`fab fa-${social.icon}`}></i>
                 </a>
               ))}
             </div>

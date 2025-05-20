@@ -45,6 +45,45 @@ export const SERVICES = [
 ];
 
 // Features
+export const GALLERY_IMAGES = [
+  {
+    src: '/assets/gallery/welding-1.jpg',
+    title: 'Industrial Welding',
+    description: 'Precision welding on steel beams',
+    category: 'Welding'
+  },
+  {
+    src: '/assets/gallery/welding-2.jpg',
+    title: 'Pipe Welding',
+    description: 'High-pressure pipe welding process',
+    category: 'Welding'
+  },
+  {
+    src: '/assets/gallery/inspection-1.jpg',
+    title: 'Quality Inspection',
+    description: 'Detailed weld inspection process',
+    category: 'Inspection'
+  },
+  {
+    src: '/assets/gallery/inspection-2.jpg',
+    title: 'Safety Check',
+    description: 'Final safety inspection before delivery',
+    category: 'Inspection'
+  },
+  {
+    src: '/assets/gallery/training-1.jpg',
+    title: 'Training Session',
+    description: 'Hands-on welding training for new technicians',
+    category: 'Training'
+  },
+  {
+    src: '/assets/gallery/certification-1.jpg',
+    title: 'Certification',
+    description: 'Welding certification ceremony',
+    category: 'Certification'
+  }
+];
+
 export const FEATURES = [
   {
     id: 1,
