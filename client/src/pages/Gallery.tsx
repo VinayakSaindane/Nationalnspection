@@ -10,26 +10,26 @@ const GALLERY_IMAGES = [
     category: 'Consultancy'
   },
   {
-    src: '/src/assets/ndt.jpg',
+    src: '/src/assets/ndt1.jpg',
     title: 'NDT Testing',
     description: 'Non-destructive testing and quality assurance',
     category: 'Testing'
   },
   {
-    src: '/src/assets/training.jpg',
+    src: '/src/assets/welding.jpg',
     title: 'Welding Training',
     description: 'Professional welding training and certification programs',
     category: 'Training'
   },
   // Additional mock entries to showcase the gallery better
   {
-    src: '/src/assets/consultancy.jpg',
+    src: '/src/assets/project.jpg',
     title: 'Industrial Welding Project',
     description: 'Large scale industrial welding consultation',
     category: 'Consultancy'
   },
   {
-    src: '/src/assets/ndt.jpg',
+    src: '/src/assets/pipeline.jpg',
     title: 'Pipeline Inspection',
     description: 'Comprehensive NDT inspection of pipeline systems',
     category: 'Testing'
@@ -41,19 +41,19 @@ const GALLERY_IMAGES = [
     category: 'Training'
   },
   {
-    src: '/src/assets/consultancy.jpg',
+    src: '/src/assets/structural.jpg',
     title: 'Structural Welding',
     description: 'Structural steel welding consultation and oversight',
     category: 'Consultancy'
   },
   {
-    src: '/src/assets/ndt.jpg',
+    src: '/src/assets/visua.jpeg',
     title: 'Quality Control',
     description: 'Rigorous quality control and testing procedures',
     category: 'Testing'
   },
   {
-    src: '/src/assets/training.jpg',
+    src: '/src/assets/qc.jpeg',
     title: 'Hands-on Workshop',
     description: 'Practical welding skills development workshop',
     category: 'Training'

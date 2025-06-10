@@ -101,7 +101,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <style jsx>{`
+      <style>{`
         .contact-container {
           padding: 4rem 2rem;
           background: linear-gradient(135deg, #f9f9f9, #e3e3e3);

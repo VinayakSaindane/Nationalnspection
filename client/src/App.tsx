@@ -18,7 +18,6 @@ function App() {
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
-          <Route path="/training" component={Training} />
           <Route path="/contact" component={Contact} />
           <Route path="/gallery" component={Gallery} />
           <Route component={NotFound} />

@@ -14,15 +14,21 @@ const SERVICES = [
     id: 2,
     title: "Training & Certification",
     description: "Comprehensive welding training programs and certifications designed to develop and validate professional skills.",
-    image: "/src/assets/training.jpg",
+    image: "/src/assets/qualitycontrol.jpg",
     features: ["Professional Training", "Skill Validation", "Certification Programs", "Hands-on Learning"]
   },
   {
     id: 3,
-    title: "Calibration",
-    description: "Precision calibration services for welding equipment and tools, ensuring accuracy and compliance.",
-    image: "/src/assets/ndt.jpg",
-    features: ["Equipment Calibration", "Precision Testing", "Compliance Verification", "Quality Assurance"]
+title: "NDT",
+description: "Non-Destructive Testing (NDT) ensures equipment reliability through accurate, damage-free inspection and calibration, supporting safety and compliance in industrial operations.",
+image: "/src/assets/ndt.jpg",
+features: [
+  "Equipment Calibration",
+  "Precision Testing",
+  "Compliance Verification",
+  "Quality Assurance"
+]
+
   }
 ];
 

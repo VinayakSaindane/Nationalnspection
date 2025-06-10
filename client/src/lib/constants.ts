@@ -97,24 +97,24 @@ export const FEATURES = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    text: "National Inspection's training program completely transformed our welding processes. Their instructors were knowledgeable and patient, ensuring everyone on our team mastered the techniques.",
-    name: "John Martinez",
-    position: "Manufacturing Manager, Industrial Solutions Inc.",
-    initials: "JM"
+    text: "National Inspection's NDT program completely transformed our NDT processes. Their instructors were knowledgeable and patient, ensuring everyone on our team mastered the techniques.",
+    name: "Endress + Hauzer India PvT Ltd",
+    position: "Industrial Solutions Inc.",
+    initials: "EH"
   },
   {
     id: 2,
     text: "The consultancy services provided by National Inspection helped us identify critical issues in our welding procedures. Their expertise and attention to detail saved us both time and resources.",
-    name: "Sarah Chen",
-    position: "Operations Director, Precision Engineering Ltd",
-    initials: "SC"
+    name: "Astec Valves & Fittings Pvt Ltd",
+    position: "Valve Manufacturing Inc.",
+    initials: "AV"
   },
   {
     id: 3,
     text: "Thanks to National Inspection's placement services, we were able to find highly qualified welders for our project on short notice. The quality of candidates exceeded our expectations.",
-    name: "Robert Johnson",
-    position: "HR Manager, Structural Dynamics Co.",
-    initials: "RJ"
+    name: "Innovators Facade Systems Pvt Ltd",
+    position: "Glass & Glazing work Company",
+    initials: "IF"
   }
 ];
 

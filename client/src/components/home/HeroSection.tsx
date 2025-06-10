@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div 
         className="bg-cover bg-center h-screen flex items-center" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')" }}
+        style={{ backgroundImage: "url('/src/assets/background.jpg')" }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl">
