@@ -1,5 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import consultancy from '../../../public/assets/assets/consultancy.jpg';
+
+import qualitycontrol from '../../../public/assets/assets/qualitycontrol.jpg';
+
+import ndt from '../../../public/assets/assets/ndt.jpg';
+
 
 // Services data with images from your assets folder
 const SERVICES = [
@@ -7,21 +13,21 @@ const SERVICES = [
     id: 1,
     title: "Consultancy",
     description: "Expert guidance on welding process optimization, quality control, compliance, and project management.",
-    image: "/src/assets/consultancy.jpg",
+    image: consultancy,
     features: ["Process Optimization", "Quality Control", "Compliance Management", "Project Planning"]
   },
   {
     id: 2,
     title: "Training & Certification",
     description: "Comprehensive welding training programs and certifications designed to develop and validate professional skills.",
-    image: "/src/assets/qualitycontrol.jpg",
+    image: qualitycontrol,
     features: ["Professional Training", "Skill Validation", "Certification Programs", "Hands-on Learning"]
   },
   {
     id: 3,
 title: "NDT",
 description: "Non-Destructive Testing (NDT) ensures equipment reliability through accurate, damage-free inspection and calibration, supporting safety and compliance in industrial operations.",
-image: "/src/assets/ndt.jpg",
+image: ndt,
 features: [
   "Equipment Calibration",
   "Precision Testing",

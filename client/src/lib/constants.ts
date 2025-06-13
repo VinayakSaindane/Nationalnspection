@@ -1,18 +1,24 @@
-// Services
+import visua from '../../public/assets/assets/visua.jpeg';
+import consultany from '../../public/assets/assets/consultancy.jpg';
+import traning from '../../public/assets/assets/training.jpg';
+import ndt2 from '../../public/assets/assets/ndt2.jpg';
+import qualitycontrol from '../../public/assets/assets/qualitycontrol.jpg';
+
 export const SERVICES = [
   {
     id: 1,
     title: "Consultancy",
     description: "Expert guidance on welding process optimization, quality control, compliance, and project management.",
     icon: "fas fa-comments",
-    backgroundImage: "https://images.unsplash.com/photo-1605463168084-45b5b13b0a6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    backgroundImage: consultany,
+     
   },
   {
     id: 2,
     title: "Training & Certification",
     description: "Comprehensive welding training programs and certifications designed to develop and validate professional skills.",
     icon: "fas fa-graduation-cap",
-    backgroundImage: "https://images.unsplash.com/photo-1594278141438-7d434193b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    backgroundImage: traning,
   },
   {
     id: 3,
@@ -26,21 +32,21 @@ export const SERVICES = [
     title: "N.D.T. (Non-Destructive Testing)",
     description: "Advanced testing methods including ultrasonic, radiographic, magnetic particle, and dye penetrant testing.",
     icon: "fas fa-search",
-    backgroundImage: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    backgroundImage: ndt2,
   },
   {
     id: 5,
     title: "Welding Placement",
     description: "Connecting skilled welders with industry opportunities through our specialized placement services.",
     icon: "fas fa-users-cog",
-    backgroundImage: "https://images.unsplash.com/photo-1617104678098-de229db51175?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    backgroundImage: qualitycontrol,
   },
   {
     id: 6,
     title: "Quality Inspection",
     description: "Comprehensive inspection services to ensure welds meet industry standards and specifications.",
     icon: "fas fa-clipboard-check",
-    backgroundImage: "https://images.unsplash.com/photo-1624204731522-7873196efce6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    backgroundImage: visua
   }
 ];
 

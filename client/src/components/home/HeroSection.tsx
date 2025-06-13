@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import background from '../../../public/assets/assets/background.jpg';
 
 const HeroSection = () => {
   return (
@@ -7,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div 
         className="bg-cover bg-center h-screen flex items-center" 
-        style={{ backgroundImage: "url('/src/assets/background.jpg')" }}
+        style={{ backgroundImage: `url(${background})` }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl">

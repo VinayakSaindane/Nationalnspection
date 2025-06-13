@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import wedingConsultancy from './../../public/assets/assets/consultancy.jpg'
+import ndt1 from './../../public/assets/assets/ndt1.jpg'
+import welding from './../../public/assets/assets/welding.jpg'
+import project from './../../public/assets/assets/project.jpg'
+import pipeline from './../../public/assets/assets/pipeline.jpg'
+import training from './../../public/assets/assets/training.jpg'
+import structural from './../../public/assets/assets/structural.jpg'
+import visua from './../../public/assets/assets/visua.jpeg'
+import qc from './../../public/assets/assets/qc.jpeg'
 // Gallery images data using your asset files
 const GALLERY_IMAGES = [
   {
@@ -10,50 +18,50 @@ const GALLERY_IMAGES = [
     category: 'Consultancy'
   },
   {
-    src: '/src/assets/ndt1.jpg',
+    src: ndt1,
     title: 'NDT Testing',
     description: 'Non-destructive testing and quality assurance',
     category: 'Testing'
   },
   {
-    src: '/src/assets/welding.jpg',
+    src: welding,
     title: 'Welding Training',
     description: 'Professional welding training and certification programs',
     category: 'Training'
   },
   // Additional mock entries to showcase the gallery better
   {
-    src: '/src/assets/project.jpg',
+    src: project,
     title: 'Industrial Welding Project',
     description: 'Large scale industrial welding consultation',
-    category: 'Consultancy'
+    category: 'Testing'
   },
   {
-    src: '/src/assets/pipeline.jpg',
+    src: pipeline,
     title: 'Pipeline Inspection',
     description: 'Comprehensive NDT inspection of pipeline systems',
     category: 'Testing'
   },
   {
-    src: '/src/assets/training.jpg',
+    src: training,
     title: 'Certification Course',
     description: 'Advanced welding certification training program',
     category: 'Training'
   },
   {
-    src: '/src/assets/structural.jpg',
+    src: structural,
     title: 'Structural Welding',
     description: 'Structural steel welding consultation and oversight',
-    category: 'Consultancy'
+    category: 'Testing'
   },
   {
-    src: '/src/assets/visua.jpeg',
+    src: visua,
     title: 'Quality Control',
     description: 'Rigorous quality control and testing procedures',
     category: 'Testing'
   },
   {
-    src: '/src/assets/qc.jpeg',
+    src: qc,
     title: 'Hands-on Workshop',
     description: 'Practical welding skills development workshop',
     category: 'Training'

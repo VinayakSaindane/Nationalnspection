@@ -6,6 +6,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 
+
+
+
 const Services = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,6 +16,7 @@ const Services = () => {
 
   const serviceDetails = [
     {
+      
       id: 1,
       title: "Consultancy",
       description: "Our consultancy services help organizations optimize their welding operations for efficiency, quality, and compliance.",
@@ -34,6 +38,7 @@ const Services = () => {
     },
     {
       id: 2,
+     
       title: "Training & Certification",
       description: "We offer comprehensive training programs designed to develop skilled welders and inspectors, with industry-recognized certifications.",
       features: [
@@ -74,6 +79,7 @@ const Services = () => {
     },
     {
       id: 4,
+      
       title: "N.D.T. (Non-Destructive Testing)",
       description: "Our comprehensive NDT services verify the quality and integrity of welds without compromising the structure.",
       features: [
@@ -94,6 +100,7 @@ const Services = () => {
     },
     {
       id: 5,
+     
       title: "Welding Placement",
       description: "Our placement services connect skilled welders with industry opportunities, benefiting both employers and job seekers.",
       features: [
@@ -114,6 +121,7 @@ const Services = () => {
     },
     {
       id: 6,
+     
       title: "Quality Inspection",
       description: "Our comprehensive inspection services ensure welds meet industry standards and specifications, providing peace of mind and documentation.",
       features: [
