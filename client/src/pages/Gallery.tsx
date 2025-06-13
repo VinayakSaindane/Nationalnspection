@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-
+import wedingConsultancy from './../../public/assets/assets/consultancy.jpg'
 // Gallery images data using your asset files
 const GALLERY_IMAGES = [
   {
-    src: '/src/assets/consultancy.jpg',
+    src: wedingConsultancy,
     title: 'Welding Consultancy',
     description: 'Expert consultation services for welding projects',
     category: 'Consultancy'
