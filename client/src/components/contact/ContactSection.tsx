@@ -37,9 +37,9 @@ const ContactSection = () => {
   };
 
   const contactInfo = {
-    address: "123 Business Street\nSuite 456\nCity, State 12345",
-    phone: ["(555) 123-4567", "(555) 987-6543"],
-    email: ["info@example.com", "support@example.com"],
+    address: "B/204 , Radium Park , Manvel Pada Virar East , Maharashtra 401305",
+    phone: ["+91 7276835354"],
+    email: ["nationalinspection86@gmail.com"],
     hours: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 10:00 AM - 4:00 PM", "Sunday: Closed"]
   };
 
@@ -147,46 +147,66 @@ const ContactSection = () => {
           
           <div>
             <div className="bg-gray-50 rounded-lg shadow-md mb-8">
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-blue-600 mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                   
-                  
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="text-orange-500 mt-1 mr-4">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-blue-600 mb-1">Phone</h4>
-                      {contactInfo.phone.map((number, index) => (
-                        <p key={index} className="text-gray-600">{number}</p>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="text-orange-500 mt-1 mr-4">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-blue-600 mb-1">Email</h4>
-                      {contactInfo.email.map((email, index) => (
-                        <p key={index} className="text-gray-600">{email}</p>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                  </div>
-                </div>
+             <div className="p-8">
+  <h3 className="text-2xl font-bold text-blue-600 mb-6">
+    Contact Information
+  </h3>
+
+  <div className="space-y-6">
+    {/* Phone */}
+    <div className="flex items-start">
+      <div className="text-orange-500 mt-1 mr-4 flex-shrink-0">
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+        </svg>
+      </div>
+
+      <div>
+        <h4 className="font-bold text-blue-600 mb-1">Phone</h4>
+
+        <div className="space-y-1">
+          {contactInfo.phone.map((number, index) => (
+            <a
+              key={index}
+              href={`tel:${number.replace(/[^\d+]/g, "")}`}
+              className="block text-gray-600 hover:text-orange-500 hover:underline transition-colors"
+            >
+              {number}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Email */}
+    <div className="flex items-start">
+      <div className="text-orange-500 mt-1 mr-4 flex-shrink-0">
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+        </svg>
+      </div>
+
+      <div>
+        <h4 className="font-bold text-blue-600 mb-1">Email</h4>
+
+        <div className="space-y-1">
+          {contactInfo.email.map((email, index) => (
+            <a
+              key={index}
+              href={`mailto:${email}?subject=${encodeURIComponent(
+                "Website Inquiry"
+              )}`}
+              className="block text-gray-600 hover:text-orange-500 hover:underline transition-colors break-all"
+            >
+              {email}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
               </div>
             </div>
             
@@ -206,7 +226,7 @@ const ContactSection = () => {
                     </svg>
                   </a>
                   <a 
-                    href="https://youtube.com/@nationalinspection" 
+                    href="https://youtube.com/@deveshpimple8306?si=i6C_LkseJNjV_xmg" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-red-600 hover:bg-red-700 text-white h-10 w-10 rounded-full flex items-center justify-center transition duration-300"
@@ -217,7 +237,7 @@ const ContactSection = () => {
                     </svg>
                   </a>
                   <a 
-                    href="https://linkedin.com/company/national-inspection" 
+                    href="https://www.linkedin.com/in/devesh-pimple-17a774a4" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-800 hover:bg-blue-900 text-white h-10 w-10 rounded-full flex items-center justify-center transition duration-300"
@@ -225,17 +245,6 @@ const ContactSection = () => {
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                  <a 
-                    href="https://www.instagram.com/national_inspection/" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white h-10 w-10 rounded-full flex items-center justify-center transition duration-300"
-                    aria-label="Follow us on Instagram"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 2.25c-5.384 0-9.75 4.366-9.75 9.75s4.366 9.75 9.75 9.75 9.75-4.366 9.75-9.75S15.384 2.25 10 2.25zM5.75 12a4.25 4.25 0 118.5 0 4.25 4.25 0 01-8.5 0zm4.25-2.75a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5zm5.25-1.5a.75.75 0 100-1.5.75.75 0 000 1.5z" clipRule="evenodd" />
                     </svg>
                   </a>
                 </div>

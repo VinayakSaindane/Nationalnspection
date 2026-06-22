@@ -193,9 +193,9 @@ export const COURSE_CATEGORIES = [
 
 // Contact Information
 export const CONTACT_INFO = {
-  address: "123 Welding Street, Industrial Zone\nHouston, TX 77001, USA",
-  phone: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-  email: ["info@nationalinspection.com", "training@nationalinspection.com"],
+  address: "B/204, Radium Park , Manvelpada Road , Virar (E) - 401305",
+  phone: ["+917276835354",],
+  email: ["nationalinspection86@gmail.com"],
   hours: [
     "Monday - Friday: 8:00 AM - 6:00 PM",
     "Saturday: 9:00 AM - 1:00 PM",

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
   // Use a relative path that matches your actual directory structure
-  const aboutImage = "/src/assets/ndt.jpg";
+  const aboutImage = "/../public/assets/assets/project.jpg";
   
   // Add error handling for the image
   const [imageError, setImageError] = useState(false);

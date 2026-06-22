@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { SERVICES, CONTACT_INFO } from "@/lib/constants";
+import logo from "../../../public/assets/assets/logo_ni.png";
 
 const Footer = () => {
   // Social media links - you can update these with your actual URLs
@@ -11,17 +12,13 @@ const Footer = () => {
     },
     {
       icon: "linkedin-in",
-      href: "https://linkedin.com/company/national-inspection",
+      href: "https://www.linkedin.com/in/devesh-pimple-17a774a4",
       label: "LinkedIn"
     },
-    {
-      icon: "instagram",
-      href: "https://www.instagram.com/national_inspection/",
-      label: "Instagram"
-    },
+  
     {
       icon: "youtube",
-      href: "https://youtube.com/@nationalinspection",
+      href: "https://youtube.com/@deveshpimple8306?si=i6C_LkseJNjV_xmg",
       label: "YouTube"
     }
   ];
@@ -32,17 +29,23 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo and Intro */}
           <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="text-4xl text-accent-500">
-                <i className="fas fa-hard-hat"></i>
-              </div>
-              <div>
-                <h3 className="text-2xl font-extrabold font-inter tracking-tight">
-                  National Inspection
-                </h3>
-                <p className="text-sm text-accent-400 font-light">A Total Welder's Hub</p>
-              </div>
-            </div>
+           <div className="flex items-center space-x-3 mb-6">
+  <img
+    src={logo}
+    alt="National Inspection Logo"
+    className="h-16 w-14 object-contain flex-shrink-0"
+  />
+
+  <div>
+    <h3 className="text-2xl font-extrabold font-inter tracking-tight">
+      National Inspection
+    </h3>
+
+    <p className="text-sm text-accent-400 font-light">
+      A Total Welder's Hub
+    </p>
+  </div>
+</div>
             <p className="text-gray-300 text-sm mb-6 leading-relaxed">
               Providing comprehensive welding services, training, and certification to enhance
               quality and safety in the welding industry.
